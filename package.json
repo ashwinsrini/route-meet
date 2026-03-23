@@ -1,0 +1,7 @@
+{
+  "name": "routemeet",
+  "private": true,
+  "scripts": {
+    "health-check": "node tests/api-health-check.js"
+  }
+}
