@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RouteMeet</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header-bar">
+    <h1>&#9733; RouteMeet</h1>
+    <p class="subtitle">Find where to meet before heading to your destination</p>
+  </div>
+
+  <div class="container">
+    <div id="instructions">
+      <div class="step"><span class="step-num">1</span> Search for a place in Google Maps</div>
+      <div class="step"><span class="step-num">2</span> Click <b>Add Person</b> or <b>Set Destination</b> in the place panel</div>
+      <div class="step"><span class="step-num">3</span> Add 2-10 people + destination, then <b>Find Meetup Point</b></div>
+    </div>
+
+    <div id="selections"></div>
+
+    <button id="find-btn" class="find-btn" disabled>Find Meetup Point</button>
+    <button id="clear-btn" class="clear-btn">Clear All</button>
+    <button id="show-widget-btn" class="show-widget-btn">Show widget on map</button>
+
+    <div id="not-on-maps" class="notice hidden">
+      Please open <a href="https://www.google.com/maps" target="_blank">Google Maps</a> first.
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

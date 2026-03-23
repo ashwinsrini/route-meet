@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "RouteMeet",
+  "version": "3.0.0",
+  "description": "Find the perfect meetup point for multiple people heading to the same destination",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "*://www.google.com/maps/*",
+    "*://www.google.co.in/maps/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.google.com/maps/*", "*://www.google.co.in/maps/*"],
+      "js": ["content/content.js"],
+      "css": ["content/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
